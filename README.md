@@ -8,7 +8,7 @@
 
 
 - **## FIRST OF ALL
-- **move tablet_mode file to /usr/local/bin
+- **move tablet_mode file to /usr/local/bin**
 
 
 
@@ -27,23 +27,22 @@
 - **ttf-dejavu (or change the font to whatever you want)**
 - **ttf-font-awesome**
 - **Iosevka Nerd Font**
+- **Font Awesome 5 Free**
 
 - **Some scripts expect i3/scripts/ to be in PATH**
 
 
 ## Relevant files
 
-- **.config/i3/tablet_mode
+- **.config/i3/scripts/polybar_modules/tablet_launcher & tablet_options**
 
-- **.config/i3/scripts/polybar_modules/tablet_launcher & tablet_options
+- **.config/polybar/config-tablet**
 
-- **.config/polybar/config-tablet
-
-- **.config/polybar/scripts/styles.sh
+- **.config/polybar/scripts/styles.sh**
 
 
 ## Relevant lines 
 
-- **exec_always --no-startup-id ~/.config/i3/scripts/tablet_mode
+- **exec_always --no-startup-id ~/.config/i3/scripts/tablet_mode**
 
-- **bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/polybar_modules/tablet_options toggle
+- **bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/polybar_modules/tablet_options toggle**
