@@ -19,10 +19,8 @@
 ## Other prerequisites
 
 - **xdotool**
-- **i3lock**
-- **imagemagick**
 - **ttf-dejavu (or change the font to whatever you want)**
-- **ttf-font-awesome (AUR)**
+- **ttf-font-awesome**
 - **Iosevka Nerd Font**
 
 - **Some scripts expect i3/scripts/ to be in PATH**
@@ -30,7 +28,7 @@
 
 ## Relevant files
 
-.config/i3/scripts/tablet_mode, polybar_tablet
+.config/i3/tablet_mode
 
 .config/i3/scripts/polybar_modules/tablet_launcher & tablet_options
 

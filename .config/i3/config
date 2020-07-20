@@ -1,7 +1,7 @@
 #============================= Launch settings ===============================#
 # Applications to be launched when i3 starts
 
-exec_always --no-startup-id ~/.config/i3/scripts/tablet_mode
+exec_always --no-startup-id ~/.config/i3/tablet_mode
 
 #=============================================================================#
 
