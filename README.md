@@ -43,6 +43,6 @@
 
 ## Relevant lines 
 
-- **exec_always --no-startup-id ~/.config/i3/scripts/tablet_mode**
+- **exec_always --no-startup-id tablet_mode**
 
 - **bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/polybar_modules/tablet_options toggle**
