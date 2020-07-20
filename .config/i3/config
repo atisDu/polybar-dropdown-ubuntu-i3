@@ -1,7 +1,7 @@
 #============================= Launch settings ===============================#
 # Applications to be launched when i3 starts
 
-exec_always --no-startup-id ~/.config/i3/tablet_mode
+exec_always --no-startup-id tablet_mode
 
 #=============================================================================#
 
@@ -64,11 +64,6 @@ bindsym $mod+Shift+d exec --no-startup-id ~/.config/i3/scripts/polybar_modules/t
 
 # Open options menu
 bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/polybar_modules/tablet_options toggle
-
-# Search open windows
-bindsym $mod+a exec --no-startup-id ~/.config/i3/scripts/pmenu.sh
-#bindsym $mod+a exec --no-startup-id rofi -show window -theme sidebar -font "Noto Sans 8"  -xoffset 15 -yoffset 10 -padding 5  -location 1  -width 350 -fixed-num-lines 11
-
 
 # Screenshot of entire desktop
 bindsym $mod+F4 exec scrot -e 'feh $f -x' -d 2

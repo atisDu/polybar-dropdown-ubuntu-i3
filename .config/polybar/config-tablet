@@ -79,7 +79,7 @@ line-size = 4
 line-color = #f00
 
 
-modules-left = option_menu ewmh
+modules-left = option_menu i3
 ;modules-center = polywins
 modules-right = keyboard left
 module-margin-left = 0

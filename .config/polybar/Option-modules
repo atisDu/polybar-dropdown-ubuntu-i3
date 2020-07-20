@@ -13,32 +13,32 @@ click-left = thunar
 [module/Facebook]
 type = custom/text
 content = "  "
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch Facebook
+click-left = ~/.config/i3/scripts/polybar_modules/tablet_launcher launch Facebook
 
 [module/twitter]
 type = custom/text
 content = "  "
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch twitter
+click-left = ~/.config/i3/scripts/polybar_modules/tablet_launcher launch twitter
 
 [module/github]
 type = custom/text
 content = "  "
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch github
+click-left = ~/.config/i3/scripts/polybar_modules/tablet_launcher launch github
 
 [module/gmail]
 type = custom/text
 content = "  "
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch gmail
+click-left = ~/.config/i3/scripts/polybar_modules/tablet_launcher launch gmail
 
 [module/unixporn]
 type = custom/text
 content = "  "
-click-left = /home/uriel/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch unixporn
+click-left = ~/.config/i3/scripts/polybar_modules/tablet_launcher launch unixporn
 
 [module/youtube]
 type = custom/text
 content = "  "
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher launch youtube
+click-left = ~/.config/i3/scripts/polybar_modules/tablet_launcher launch youtube
 
 
 #-----------------------------------------------------------------------------#
@@ -87,42 +87,42 @@ content-foreground = ${colors.fg}
 [module/vol_up]
 type = custom/text
 content = "  "
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/volume increase
+click-left = ~/.config/i3/scripts/polybar_modules/volume increase
 content-background = ${colors.bg}
 content-foreground = ${colors.fg}
 
 [module/vol_down]
 type = custom/text
 content ="    "
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/volume decrease
+click-left = ~/.config/i3/scripts/polybar_modules/volume decrease
 content-background = ${colors.bg}
 content-foreground = ${colors.fg}
 
 [module/volume]
 type = custom/ipc
-hook-0 = ~/.config/regolith/i3/scripts/polybar_modules/volume slider
+hook-0 = ~/.config/i3/scripts/polybar_modules/volume slider
 format = %{T5}<output>%{T-}
 initial = 1
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/volume mute
+click-left = ~/.config/i3/scripts/polybar_modules/volume mute
 format-background = ${colors.bg}
 
 [module/backlight_up]
 type = custom/text
 content = "  "
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/backlight increase
+click-left = ~/.config/i3/scripts/polybar_modules/backlight increase
 content-background = ${colors.bg}
 content-foreground = ${colors.fg}
 
 [module/backlight_down]
 type = custom/text
 content ="   "
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/backlight decrease
+click-left = ~/.config/i3/scripts/polybar_modules/backlight decrease
 content-background = ${colors.bg}
 content-foreground = ${colors.fg}
 
 [module/backlight]
 type = custom/ipc
-hook-0 = ~/.config/regolith/i3/scripts/polybar_modules/backlight slider
+hook-0 = ~/.config/i3/scripts/polybar_modules/backlight slider
 format = %{T5}<output>%{T-}
 format-background = ${colors.bg}
 initial = 1
@@ -234,7 +234,7 @@ content-underline = ${colors.fg}
 content-padding = 0
 click-left = ~/.config/polybar/scripts/styles.sh --Light
 click-right = ~/.config/polybar/scripts/styles.sh --Dark
-click-center = ~/.config/regolith/i3/scripts/polybar_modules/tablet_options toggle
+click-center = ~/.config/i3/scripts/polybar_modules/tablet_options toggle
 
 [module/wifi]
 type = custom/text
@@ -280,10 +280,10 @@ content-overline = ${colors.bg}
 #----------------------------- Primary modules -------------------------------#
 [module/applauncher]
 type = custom/ipc
-hook-0 = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher icon
+hook-0 = ~/.config/i3/scripts/polybar_modules/tablet_launcher icon
 initial = 1
 format = <output>
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_launcher toggle
+click-left = ~/.config/i3/scripts/polybar_modules/tablet_launcher toggle
 format-background = ${colors.bg}
 format-foreground = ${colors.foreground}
 ;format-overline = ${colors.background}
@@ -291,31 +291,61 @@ format-foreground = ${colors.foreground}
 
 [module/option_menu]
 type = custom/ipc
-hook-0 = ~/.config/regolith/i3/scripts/polybar_modules/tablet_options icon
+hook-0 = ~/.config/i3/scripts/polybar_modules/tablet_options icon
 initial = 1
-click-left = ~/.config/regolith/i3/scripts/polybar_modules/tablet_options toggle
+click-left = ~/.config/i3/scripts/polybar_modules/tablet_options toggle
 format-background = ${colors.bg}
 ;format-underline = ${colors.foreground}
 
 #-----------------------------------------------------------------------------#
-[module/ewmh]
-type = internal/xworkspaces
-enable-scroll = true
-format-padding = 2
-format-foreground = ${colors.fg}
-format-background = ${colors.bg}
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
 
-label-active = "  ●"
-label-active-foreground = #ff0000
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
 
-label-occupied = "  ●"
-label-occupied-foreground = #595959
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = " "
 
-label-urgent = "  ●"
-label-urgent-foreground = #ff0000
+label-mode-padding = 2
+label-mode-foreground = #2f343f
+label-mode-background = #cb6077
 
-label-empty = "  ●"
-label-empty-foreground = #595959
+label-focused = %name% : %icon%
+label-focused-background = ${colors.bg}
+label-focused-foreground = #595959
+;label-focused-underline = #e4bc87
+label-focused-padding = 3
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name% : %icon%
+label-unfocused-padding = 3
+label-unfocused-background = ${colors.bg}
+label-unfocused-foreground = ${colors.background}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon%
+label-visible-background = ${self.label-focused-background}
+;label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = 3
+
+; urgent = Workspace with urgency hint set
+label-urgent = %name%
+label-urgent-background = ${self.label-focused-background}
+label-urgent-foreground = #cb6077
+label-urgent-padding = 3
 
 #-----------------------------------------------------------------------------#
 [module/date]
@@ -685,10 +715,3 @@ bar-load-empty ="█"
 bar-load-empty-foreground = ${colors.foreground-alt}
 bar-load-empty-background = ${colors.bg}
 bar-load-empty-font = 1
-
-[module/polywins]
-type = custom/script
-exec = $HOME/.config/polybar/scripts/polywins.sh
-tail = true
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}

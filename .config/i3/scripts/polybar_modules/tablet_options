@@ -8,7 +8,7 @@ fetch_color()
 }
 PRIMARY=$(fetch_color primary)
 TEXT=$(fetch_color foreground)
-MUTE=$(fetch_color background_alt)
+MUTE=$(fetch_color background_trans)
 
 open() {
     ~/.config/i3/scripts/polybar_modules/tablet_launcher close
@@ -44,7 +44,7 @@ toggle() {
 }
 
 icon() {
-    COLOR_BASE="%{F#$TEXT}"
+    COLOR_BASE="%{F#$MUTE}"
     COLOR_ACTIVE="%{F#$PRIMARY}"
     COLOR_END="%{F-}"
 

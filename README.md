@@ -7,6 +7,11 @@
 ![Light](/preview/light.png)
 
 
+- **## FIRST OF ALL
+- **move tablet_mode file to /usr/local/bin
+
+
+
 ## Details
 - **Distro** Ubuntu
 - **WM** i3
@@ -28,17 +33,17 @@
 
 ## Relevant files
 
-.config/i3/tablet_mode
+- **.config/i3/tablet_mode
 
-.config/i3/scripts/polybar_modules/tablet_launcher & tablet_options
+- **.config/i3/scripts/polybar_modules/tablet_launcher & tablet_options
 
-.config/polybar/config-tablet
+- **.config/polybar/config-tablet
 
-.config/polybar/scripts/styles.sh
+- **.config/polybar/scripts/styles.sh
 
 
 ## Relevant lines 
 
-exec_always --no-startup-id ~/.config/i3/scripts/tablet_mode
+- **exec_always --no-startup-id ~/.config/i3/scripts/tablet_mode
 
-bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/polybar_modules/tablet_options toggle
+- **bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/polybar_modules/tablet_options toggle

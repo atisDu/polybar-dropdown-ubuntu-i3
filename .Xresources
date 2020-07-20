@@ -37,14 +37,40 @@
 *.color7: #323432
 *.color15: #323432
 
+#define nord0 #351919
+#define nord1 #351919
+#define nord2 #434C5E
+#define nord3 #595959
+#define nord4 #D8DEE9
+#define nord5 #ecdfd0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #F1D2AE
+#define nord9 #F4B06E
+#define nord10 #5E81AC
 #define nord11 #CF5E49
+#define nord12 #D08770
+#define nord13 #E8955F
 #define nord14 #B38B70
 #define nord15 #DCB18F
 
+#define CLEAR argb:00000000
+
+#define BG        nord0
+#define BG_TRANS  #00000000
+#define BG_ARGB   argb:D92E3440
+#define BG_ALT    nord3
+#define TXT       nord4
+#define TXT_ALT   nord6
 #define PRIMARY   nord11
 #define SECONDARY nord14
 #define URGENT    nord15
 
+
+*background      : BG
+*background_trans: BG_TRANS
+*background_alt  : BG_ALT
+*foreground      : TXT
 *primary         : PRIMARY
 *secondary       : SECONDARY
 *urgent          : URGENT
